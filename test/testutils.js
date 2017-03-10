@@ -1,4 +1,4 @@
-var Ballot = artifacts.require("./Ballot.sol");
+var SimpleAuction = artifacts.require("./SimpleAuction.sol");
 
 var TestUtils = {
 

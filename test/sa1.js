@@ -15,12 +15,14 @@ contract('Sa1', function(accounts) {
         var ac2_end;
         var ac3_end;
 
-        return SimpleAuction.new(1,ac1).then(function(instance) {
+        return SimpleAuction.new({"a":1,"b":ac1}).then(function(instance) {
             meta = instance;
 
+        })
+        
         // Do all the minting up front so I can play with the
         // ability for others besides the minter to mint coins
-
+/*
             return meta.bid();
         }).then(function() {
 
@@ -29,7 +31,7 @@ contract('Sa1', function(accounts) {
 
             return meta.bid();
         })
-/*
+
         }).then(function() {
 
             return meta.delegate(ac2);
