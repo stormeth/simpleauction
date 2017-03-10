@@ -4,7 +4,7 @@ var SimpleAuction = artifacts.require("./SimpleAuction.sol");
 contract('Sa1', function(accounts) {
 
     it("t1", function() {
-        var meta;
+        var meta1, meta2;
 
         // Get initial balances of first and second account.
         var ac1 = accounts[0];
@@ -14,18 +14,16 @@ contract('Sa1', function(accounts) {
         var ac1_end;
         var ac2_end;
         var ac3_end;
-/*
-        return SimpleAuction.new({"a":1,"b":ac1}).then(function(instance) {
-            meta = instance;
 
-        })
-*/
-
-        return SimpleAuction.deployed().then(function(instance) {
-            meta = instance;
+        return SimpleAuction.new(100,ac2).then(function(instance) {
+            meta1 = instance;
 
         })
 
+        return SimpleAuction.deployed(10,ac3).then(function(instance) {
+            meta2 = instance;
+
+        })
 
         // Do all the minting up front so I can play with the
         // ability for others besides the minter to mint coins
