@@ -25,8 +25,6 @@ contract('Sa1', function(accounts) {
 
         })
 
-        // Do all the minting up front so I can play with the
-        // ability for others besides the minter to mint coins
 /*
             return meta.bid();
         }).then(function() {
